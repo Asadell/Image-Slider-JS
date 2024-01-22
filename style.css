@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: #252525;
+  height: 100%;
+}
+
+.slider {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.image {
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+}
+
+.image.display {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
